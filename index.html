@@ -1,38 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineCue Support</title>
+    <title>CineCue Destek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
     <style>
+        /* Genel Sayfa Ayarları */
         body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 2em;
+            font-family: 'Nunito', sans-serif; /* Google Font veya sistem fontu */
+            line-height: 1.7;
+            background-color: #f8f9fa; /* Açık gri arkaplan */
+            color: #343a40; /* Koyu gri metin */
+            margin: 0;
+            padding: 0;
+            display: flex; /* İçeriği ortalamak için */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Sayfanın en az ekran yüksekliğinde olmasını sağla */
         }
+
+        /* İçerik Kutusu */
+        .container {
+            background-color: #ffffff; /* Beyaz kutu */
+            padding: 3em 4em; /* İç boşluklar (dikey, yatay) */
+            border-radius: 10px; /* Köşeleri yuvarlat */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+            max-width: 650px; /* Kutunun maksimum genişliği */
+            width: 90%; /* Küçük ekranlarda genişliği ayarla */
+            text-align: center; /* İçeriği ortala */
+            margin: 2em 0; /* Üst ve alt boşluk */
+        }
+
+        /* Başlıklar */
         h1 {
-            color: #333;
+            color: #212529; /* Daha koyu başlık rengi */
+            margin-bottom: 0.5em;
         }
-        a {
-            color: #007bff;
+
+        h2 {
+            color: #495057; /* İkinci başlık rengi */
+            margin-top: 1.5em;
+            margin-bottom: 0.7em;
+            border-bottom: 1px solid #dee2e6; /* Başlığın altına ince çizgi */
+            padding-bottom: 0.3em;
+            display: inline-block; /* Çizginin başlık kadar olmasını sağla */
         }
+
+        /* Paragraflar */
+        p {
+            color: #495057; /* Biraz daha açık metin rengi */
+            margin-bottom: 1em;
+        }
+
+        /* E-posta Linki (Buton Görünümü) */
+        .support-email a {
+            display: inline-block; /* Buton gibi davranması için */
+            background-color: #007bff; /* Mavi buton rengi */
+            color: #ffffff; /* Beyaz yazı rengi */
+            padding: 12px 25px; /* Buton iç boşlukları */
+            text-decoration: none; /* Alt çizgiyi kaldır */
+            border-radius: 5px; /* Buton köşelerini yuvarlat */
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Renk değişim animasyonu */
+            margin-top: 0.5em;
+        }
+
+        .support-email a:hover {
+            background-color: #0056b3; /* Hover rengi (koyu mavi) */
+        }
+
+        /* Küçük Ekranlar İçin Ayarlamalar */
+        @media (max-width: 600px) {
+            .container {
+                padding: 2em 1.5em;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+
     </style>
 </head>
 <body>
 
-    <h1>CineCue Support</h1>
+    <div class="container">
+        <h1>CineCue Destek</h1>
 
-    <p>Welcome to the support page for the CineCue app.</p>
+        <p>CineCue uygulaması destek sayfasına hoş geldiniz.</p>
 
-    <h2>Contact Us</h2>
-    <p>
-        If you have any questions, need help, or want to report a bug, please feel free to contact us via email:
-    </p>
-    <p>
-        <strong><a href="mailto:aiartfordalle@gmail.com">cinecue@appwise.com</a></strong>
+        <h2>Bize Ulaşın</h2>
+        <p>
+            Yardıma ihtiyacınız varsa, soru sormak veya hata bildirmek isterseniz, lütfen aşağıdaki e-posta adresinden bize ulaşın:
+        </p>
+        <p class="support-email">
+             <a href="mailto:aiartfordalle@gmail.com">aiartfordalle@gmail.com</a>
         </p>
 
-    <p>We will try to get back to you as soon as possible.</p>
+        <p>Size en kısa sürede geri dönüş yapmaya çalışacağız.</p>
 
-    </body>
+         </div>
+
+</body>
 </html>
