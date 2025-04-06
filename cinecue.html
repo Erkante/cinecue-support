@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineCue - Your Movie & TV Show Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Genel Stiller */
+        :root {
+            --primary-color: #0d6efd; /* Ana Renk (Mavi tonu) */
+            --dark-color: #212529;    /* Koyu Renk */
+            --light-color: #f8f9fa;   /* Açık Renk */
+            --text-color: #495057;    /* Metin Rengi */
+            --white-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.7;
+            background-color: var(--light-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1.5em;
+        }
+
+        /* Header Alanı */
+        header {
+            background: linear-gradient(to right, #4e54c8, #8f94fb); /* Gradient Arkaplan */
+            color: var(--white-color);
+            padding: 4em 0 5em 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 0.2em;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            opacity: 0.9;
+        }
+
+        /* İndirme Butonları */
+        .download-buttons a {
+            display: inline-block;
+            margin: 0.5em;
+            transition: transform 0.2s ease;
+        }
+        .download-buttons img {
+            height: 50px; /* Buton yüksekliği */
+        }
+        .download-buttons a:hover {
+            transform: scale(1.05);
+        }
+
+        /* Özellikler Bölümü */
+        #features {
+            padding: 4em 0;
+            background-color: var(--white-color);
+            text-align: center;
+        }
+
+        #features h2 {
+            font-size: 2.2em;
+            color: var(--dark-color);
+            margin-bottom: 1.5em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Mobil uyumlu grid */
+            gap: 2em;
+            text-align: left;
+        }
+
+        .feature-item {
+            background: var(--light-color);
+            padding: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .feature-item i { /* Font Awesome İkonları */
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+            display: block; /* İkonu ortala */
+            text-align: center;
+        }
+         .feature-item h3 {
+             font-size: 1.3em;
+             color: var(--dark-color);
+             margin-bottom: 0.5em;
+             text-align: center;
+         }
+
+        /* Footer Alanı */
+        footer {
+            background-color: var(--dark-color);
+            color: #adb5bd;
+            text-align: center;
+            padding: 2em 0;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--white-color);
+            text-decoration: none;
+            margin: 0 0.5em;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobil Uyum */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5em; }
+            header p { font-size: 1.1em; }
+            #features h2 { font-size: 1.8em; }
+            .feature-item { padding: 1.2em; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>CineCue</h1>
+            <p>Your Smart Movie & TV Show Companion</p>
+            <div class="download-buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.cinecue.app" target="_blank"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play"></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-search"></i> <h3>Discover</h3>
+                    <p>Explore popular, upcoming movies & TV shows. Filter by genre to find exactly what you're looking for.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-random"></i> <h3>Recommend</h3>
+                    <p>Get personalized random suggestions based on your filters (year, rating, genre, language). Find hidden gems!</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-list-alt"></i> <h3>Organize Lists</h3>
+                    <p>Keep track with Watchlist and Watched lists. Manage your favorites and see your viewing stats easily.</p>
+                </div>
+                 <div class="feature-item">
+                    <i class="fas fa-info-circle"></i> <h3>Detailed Info</h3>
+                    <p>Access summaries, cast lists, ratings, and similar title recommendations for every movie and TV show.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>
+                &copy; <script>document.write(new Date().getFullYear())</script> CineCue. All Rights Reserved. |
+                <a href="index.html">Support</a> |
+                <a href="https://docs.google.com/document/u/1/d/e/2PACX-1vRmr-VUJYO9GQCmpztEaBUfRwnIt6Kwm45jdGMQtyOzdF3UTRixIvDYOVWHYZtSK8Weupz-X5bZy6cT/pub">Privacy Policy</a>
+                 | <a href="app-ads.txt">app-ads.txt</a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
